@@ -22,7 +22,6 @@ export const projects: Project[] = [
       { label: 'Visit site', href: 'https://meridiemflow.com', primary: true },
       { label: 'Source', href: 'https://github.com/roecand/ai-lead-followup-python' },
     ],
-    openByDefault: true,
   },
 
   {

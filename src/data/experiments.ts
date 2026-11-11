@@ -28,12 +28,6 @@ export const experiments: Experiment[] = [
     href: 'https://github.com/Manj0t/mnistModel',
   },
   {
-    title: 'Travel Guide',
-    description: 'A full stack travel planning app.',
-    tech: 'TypeScript',
-    href: 'https://github.com/Manj0t/Travel-Guide-Application',
-  },
-  {
     title: 'Mini Maze Runner',
     description: 'A small game built to learn the engine rather than ship it.',
     tech: 'C#',
