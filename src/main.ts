@@ -12,6 +12,7 @@ import { renderExperience } from './components/experience';
 import { renderMarquee } from './components/marquee';
 
 import { mount } from './lib/dom';
+import { initTheme } from './lib/theme';
 import { initNav } from './lib/nav';
 import { initReveal } from './lib/reveal';
 import { initAccordion } from './lib/accordion';
@@ -36,6 +37,7 @@ function render(): void {
 
 function enhance(): void {
   // Order matters: content first, then anything that measures it.
+  initTheme();
   initNav();
   initAccordion();
   initReveal();

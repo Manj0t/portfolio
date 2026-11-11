@@ -88,13 +88,13 @@
   flex: none;
 }
 .p-status.live {
-  background: rgb(29 82 71 / 10%);
-  border-color: rgb(29 82 71 / 28%);
+  background: var(--pill-live-bg);
+  border-color: var(--pill-live-br);
   color: var(--pine);
 }
 .p-status.wip {
-  background: rgb(192 72 31 / 10%);
-  border-color: rgb(192 72 31 / 30%);
+  background: var(--pill-wip-bg);
+  border-color: var(--pill-wip-br);
   color: var(--clay-deep);
 }
 

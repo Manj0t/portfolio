@@ -1,4 +1,7 @@
-/* Design tokens. Change the palette here and the whole site follows. */
+/* Design tokens.
+   Light is the default. Dark overrides the same names under
+   [data-theme='dark'], so no component stylesheet needs to know a theme
+   exists. If you add a colour, add it in both blocks. */
 
 :root {
   /* Paper and ink */
@@ -14,9 +17,26 @@
   --clay: #c0481f;
   --clay-deep: #95371a;
   --pine: #1d5247;
+
+  /* Hero shapes */
   --sky: #8fb7c4;
   --sand: #e6b894;
   --sage: #b9cbb0;
+  --blob-op: 0.5;
+  --blob-op-c: 0.42;
+
+  /* Translucent surfaces, which cannot be derived from the solids above */
+  --nav-bg: rgb(241 235 223 / 88%);
+  --eyebrow-bg: rgb(241 235 223 / 60%);
+
+  /* Status pills */
+  --pill-live-bg: rgb(29 82 71 / 10%);
+  --pill-live-br: rgb(29 82 71 / 28%);
+  --pill-wip-bg: rgb(192 72 31 / 10%);
+  --pill-wip-br: rgb(192 72 31 / 30%);
+
+  /* Paper grain strength */
+  --grain: 0.035;
 
   /* Type */
   --display: 'Bricolage Grotesque', system-ui, sans-serif;
@@ -30,4 +50,42 @@
   /* Motion */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --slow: 0.85s;
+
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  /* Warm near-black rather than a neutral grey, so the page keeps the
+     same temperature it has in light mode. */
+  --paper: #14120e;
+  --paper-2: #1d1a14;
+  --paper-3: #272319;
+  --ink: #f0e9db;
+  --ink-soft: #c9c1ae;
+  --muted: #918872;
+  --rule: #38332a;
+
+  /* Accents lifted for contrast against the dark ground. */
+  --clay: #e4703f;
+  --clay-deep: #ec8a5e;
+  --pine: #6bb3a0;
+
+  --sky: #2f5160;
+  --sand: #5e3f29;
+  --sage: #374a31;
+  --blob-op: 0.62;
+  --blob-op-c: 0.5;
+
+  --nav-bg: rgb(20 18 14 / 88%);
+  --eyebrow-bg: rgb(20 18 14 / 60%);
+
+  --pill-live-bg: rgb(107 179 160 / 12%);
+  --pill-live-br: rgb(107 179 160 / 30%);
+  --pill-wip-bg: rgb(228 112 63 / 12%);
+  --pill-wip-br: rgb(228 112 63 / 32%);
+
+  /* Grain reads stronger on dark, so it is dialled back. */
+  --grain: 0.022;
+
+  color-scheme: dark;
 }

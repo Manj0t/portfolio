@@ -1,11 +1,35 @@
+/* Fills the first screen, then hands off to the rest of the page.
+   svh rather than vh so mobile browser chrome collapsing does not make
+   the hero jump. The grid puts the copy in the centre row and pins the
+   scroll cue to the bottom row. */
 header.hero {
   position: relative;
-  padding: clamp(8rem, 18vh, 12rem) 0 clamp(4rem, 9vh, 7rem);
   overflow: hidden;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding-block: clamp(7rem, 14vh, 10rem) clamp(1.75rem, 4vh, 2.75rem);
+}
+.hero-main {
+  display: flex;
+  align-items: center;
 }
 .hero .wrap {
   position: relative;
   z-index: 1;
+  width: 100%;
+}
+
+/* Short landscape screens have no room to centre anything. */
+@media (max-height: 560px) {
+  header.hero {
+    min-height: 0;
+    padding-block: clamp(6rem, 18vh, 8rem) clamp(2rem, 6vh, 3rem);
+  }
+  .hero-foot {
+    display: none;
+  }
 }
 
 /* Blurred shapes behind the greeting. */
@@ -93,7 +117,7 @@ header.hero {
   border: 1px solid var(--rule);
   border-radius: 999px;
   padding: 0.4rem 0.9rem;
-  background: rgb(241 235 223 / 60%);
+  background: var(--eyebrow-bg);
 }
 .pulse {
   width: 7px;
@@ -177,7 +201,6 @@ h1 b {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  margin-top: clamp(3rem, 7vw, 4.5rem);
   font-family: var(--mono);
   font-size: 0.68rem;
   letter-spacing: 0.42em;

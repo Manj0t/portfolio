@@ -27,7 +27,7 @@ nav {
     padding 0.4s var(--ease);
 }
 nav.stuck {
-  background: rgb(241 235 223 / 88%);
+  background: var(--nav-bg);
   backdrop-filter: blur(14px);
   box-shadow: 0 1px 0 var(--rule);
   padding: 0.7rem 0;
@@ -92,6 +92,59 @@ nav.stuck {
 .nav-links a:hover::after,
 .nav-links a:focus-visible::after {
   transform: scaleX(1);
+}
+
+/* Theme toggle. Both icons are stacked and cross-faded, so the button
+   never changes size between themes. */
+.theme-toggle {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition:
+    border-color 0.3s var(--ease),
+    color 0.3s var(--ease),
+    transform 0.3s var(--ease);
+}
+.theme-toggle:hover {
+  border-color: var(--clay);
+  color: var(--clay);
+  transform: translateY(-2px);
+}
+.theme-toggle svg {
+  grid-area: 1 / 1;
+  width: 17px;
+  height: 17px;
+  transition:
+    opacity 0.35s var(--ease),
+    transform 0.45s var(--ease);
+}
+.theme-toggle .i-moon {
+  opacity: 0;
+  transform: rotate(-45deg) scale(0.6);
+}
+[data-theme='dark'] .theme-toggle .i-sun {
+  opacity: 0;
+  transform: rotate(45deg) scale(0.6);
+}
+[data-theme='dark'] .theme-toggle .i-moon {
+  opacity: 1;
+  transform: none;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: none;
 }
 
 .hire {
