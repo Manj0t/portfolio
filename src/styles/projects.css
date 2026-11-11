@@ -1,0 +1,231 @@
+.projects {
+  border-top: 1px solid var(--rule);
+}
+
+.proj {
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+
+.proj-head {
+  width: 100%;
+  background: none;
+  border: 0;
+  padding: clamp(1.5rem, 3.4vw, 2.4rem) 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: clamp(1rem, 3vw, 2.4rem);
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  list-style: none;
+  transition: padding-left 0.5s var(--ease);
+}
+.proj-head::-webkit-details-marker {
+  display: none;
+}
+.proj-head::marker {
+  content: '';
+}
+.proj-head:hover {
+  padding-left: clamp(0.4rem, 1.2vw, 1rem);
+}
+
+.p-num {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  flex: none;
+  align-self: start;
+  padding-top: 0.5em;
+}
+
+.p-title {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 4.2vw, 2.75rem);
+  line-height: 1.06;
+  letter-spacing: -0.032em;
+  margin: 0 0 0.5rem;
+  transition: color 0.35s var(--ease);
+}
+.proj-head:hover .p-title {
+  color: var(--clay);
+}
+
+.p-tag {
+  font-size: clamp(0.95rem, 0.92rem + 0.2vw, 1.08rem);
+  color: var(--muted);
+  line-height: 1.45;
+  max-width: 54ch;
+  margin: 0;
+}
+
+/* Status pill. One class per ProjectStatus value. */
+.p-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  padding: 0.28rem 0.62rem;
+  border-radius: 999px;
+  margin-bottom: 0.7rem;
+  background: var(--paper-2);
+  color: var(--ink-soft);
+  border: 1px solid var(--rule);
+}
+.p-status i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  flex: none;
+}
+.p-status.live {
+  background: rgb(29 82 71 / 10%);
+  border-color: rgb(29 82 71 / 28%);
+  color: var(--pine);
+}
+.p-status.wip {
+  background: rgb(192 72 31 / 10%);
+  border-color: rgb(192 72 31 / 30%);
+  color: var(--clay-deep);
+}
+
+/* Open/close affordance. */
+.plus {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  flex: none;
+  display: grid;
+  place-items: center;
+  align-self: start;
+  margin-top: 0.25rem;
+  transition:
+    background 0.35s var(--ease),
+    border-color 0.35s var(--ease),
+    transform 0.5s var(--ease);
+}
+.plus::before,
+.plus::after {
+  content: '';
+  position: absolute;
+  background: var(--ink);
+  transition:
+    background 0.35s,
+    opacity 0.35s var(--ease);
+}
+.plus::before {
+  width: 13px;
+  height: 1.5px;
+}
+.plus::after {
+  width: 1.5px;
+  height: 13px;
+}
+.proj-head:hover .plus {
+  background: var(--ink);
+  border-color: var(--ink);
+  transform: rotate(90deg);
+}
+.proj-head:hover .plus::before,
+.proj-head:hover .plus::after {
+  background: var(--paper);
+}
+.proj[open] .plus {
+  transform: rotate(180deg);
+}
+.proj[open] .plus::after {
+  opacity: 0;
+}
+
+/* Expanded body. Height is driven from lib/accordion.ts. */
+.proj-body {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 2.4rem);
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition:
+    max-height 0.7s var(--ease),
+    opacity 0.5s var(--ease);
+}
+.proj[open] .proj-body {
+  opacity: 1;
+}
+
+.proj-body-in {
+  padding-bottom: clamp(2rem, 4.5vw, 3.2rem);
+  max-width: 62ch;
+}
+.proj-body-in p {
+  color: var(--ink-soft);
+  margin: 0 0 1.05em;
+  font-size: clamp(0.98rem, 0.95rem + 0.25vw, 1.1rem);
+}
+.proj-body-in p:last-of-type {
+  margin-bottom: 1.6em;
+}
+.proj-body-in strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+.stack li {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  color: var(--muted);
+  background: var(--paper-2);
+}
+
+.p-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.aside {
+  border-left: 2px solid var(--clay);
+  padding: 0.1rem 0 0.1rem 1.1rem;
+  margin: 0 0 1.6rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.aside b {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .proj-head {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .p-num {
+    display: none;
+  }
+  .proj-body {
+    grid-template-columns: 1fr;
+  }
+}

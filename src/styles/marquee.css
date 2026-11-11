@@ -1,0 +1,61 @@
+.marquee {
+  border-block: 1px solid var(--rule);
+  padding: 1.3rem 0;
+  overflow: hidden;
+  background: var(--paper-2);
+  position: relative;
+}
+.marquee::before,
+.marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 11vw;
+  z-index: 2;
+  pointer-events: none;
+}
+.marquee::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--paper-2), transparent);
+}
+.marquee::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--paper-2), transparent);
+}
+
+/* The track holds the skill list twice, so -50% loops seamlessly. */
+.track {
+  display: flex;
+  width: max-content;
+  animation: roll 42s linear infinite;
+}
+.marquee:hover .track {
+  animation-play-state: paused;
+}
+@keyframes roll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.track span {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  letter-spacing: -0.02em;
+  padding-inline: clamp(0.9rem, 2.2vw, 1.8rem);
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(0.9rem, 2.2vw, 1.8rem);
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.track span::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--clay);
+  flex: none;
+}

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manjot Sandhu</title>
+    <meta
+      name="description"
+      content="Manjot Sandhu is a software engineer in Las Vegas who builds backend systems and applied machine learning."
+    />
+    <meta name="color-scheme" content="only light" />
+    <meta name="theme-color" content="#f1ebdf" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Manjot Sandhu" />
+    <meta
+      property="og:description"
+      content="Software engineer in Las Vegas. Backend systems and applied machine learning."
+    />
+
+    <script>
+      document.documentElement.classList.remove('no-js');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="prog" aria-hidden="true"><span id="progBar"></span></div>
+
+    <nav id="nav">
+      <div class="wrap nav-in">
+        <a class="mark" href="#top"><i aria-hidden="true"></i>Manjot Sandhu</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="hire" href="mailto:manjotssandhu2@gmail.com">Get in touch</a>
+      </div>
+    </nav>
+
+    <!-- ── Hero ─────────────────────────────────────────────── -->
+    <header class="hero" id="top">
+      <div class="blobs" aria-hidden="true">
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="blob b3"></div>
+      </div>
+      <div class="wrap">
+        <span class="eyebrow"><i class="pulse" aria-hidden="true"></i>Open to software and ML roles</span>
+        <h1>Hi, my name is <b>Manjot</b>.</h1>
+        <p class="hero-lede">
+          I build <strong>backend systems</strong> and <strong>applied machine learning</strong> out of
+          Las Vegas. The part of this work I like most happens after something is live, when the design
+          assumptions meet real traffic and I find out which ones were wrong.
+        </p>
+        <div class="hero-meta">
+          <span>Henderson, Nevada</span>
+          <span>B.S. Computer Science, UNLV</span>
+          <span>Georgia Tech OMSCS, Jan 2027</span>
+        </div>
+        <a class="scroll-cue" href="#about"><i aria-hidden="true"></i>Scroll</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ── About ──────────────────────────────────────────── -->
+      <section id="about">
+        <div class="wrap">
+          <div class="sec-head rv"><span class="sec-num">01</span><h2>A bit more <b>detail</b>.</h2></div>
+          <div class="about-grid">
+            <div class="about-body rv">
+              <p>
+                I finish a computer science degree at UNLV in December, and I start a master's in machine
+                learning at Georgia Tech in January. Most of what I actually know did not come from
+                coursework. It came from building things end to end and then dealing with whatever broke
+                once other people were using them.
+              </p>
+              <p>
+                The work I am proudest of is usually not the first version of anything. It is the
+                <strong>second one</strong>, written after I found out the original approach did not hold
+                up. A recommendation pipeline that recomputed every user's weights and took thirty
+                seconds. A language model that was allowed to decide too much. Those rewrites taught me
+                more than the initial builds did, and they are the parts of these projects I can talk
+                about for an hour.
+              </p>
+              <p>
+                Outside of that I spent two years as the only teaching assistant for an operating systems
+                course, which mostly meant reading other people's kernel code and figuring out why it
+                deadlocked. I competed with UNLV's ACM chapter and placed first in our Codeathon.
+              </p>
+            </div>
+
+            <dl class="facts rv">
+              <div class="fact">
+                <dt>Based</dt>
+                <dd>Henderson, NV<small>Open to relocation</small></dd>
+              </div>
+              <div class="fact">
+                <dt>Degree</dt>
+                <dd>B.S. Computer Science<small>UNLV, Dec 2026 &middot; GPA 3.92</small></dd>
+              </div>
+              <div class="fact">
+                <dt>Next</dt>
+                <dd>M.S. Computer Science<small>Georgia Tech, ML spec, Jan 2027</small></dd>
+              </div>
+              <div class="fact">
+                <dt>Focus</dt>
+                <dd>Backend &amp; applied ML</dd>
+              </div>
+              <div class="fact">
+                <dt>Code</dt>
+                <dd><a href="https://github.com/Manj0t" target="_blank" rel="noopener">github.com/Manj0t</a></dd>
+              </div>
+              <div class="fact">
+                <dt>Elsewhere</dt>
+                <dd>
+                  <a href="http://www.linkedin.com/in/manjot-sandhu-b4a842290" target="_blank" rel="noopener"
+                    >LinkedIn</a
+                  >
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Work (rendered from src/data/projects.ts) ───────── -->
+      <section id="work">
+        <div class="wrap">
+          <div class="sec-head rv"><span class="sec-num">02</span><h2>Things I have <b>built</b>.</h2></div>
+          <div class="projects" id="projectList"></div>
+        </div>
+      </section>
+
+      <!-- ── Skills marquee (src/data/skills.ts) ─────────────── -->
+      <div class="marquee" aria-hidden="true">
+        <div class="track" id="skillTrack"></div>
+      </div>
+
+      <!-- ── Experiments (src/data/experiments.ts) ───────────── -->
+      <section id="smaller">
+        <div class="wrap">
+          <div class="sec-head rv"><span class="sec-num">03</span><h2>Smaller <b>experiments</b>.</h2></div>
+          <div class="repo-grid rv" id="experimentGrid"></div>
+        </div>
+      </section>
+
+      <!-- ── Experience (src/data/experience.ts) ─────────────── -->
+      <section id="experience">
+        <div class="wrap">
+          <div class="sec-head rv"><span class="sec-num">04</span><h2>Where I have <b>worked</b>.</h2></div>
+          <div class="xp" id="experienceList"></div>
+
+          <p class="xp-label rv">Involvement</p>
+          <div class="xp" id="involvementList"></div>
+        </div>
+      </section>
+
+      <!-- ── Contact ────────────────────────────────────────── -->
+      <section id="contact" class="contact">
+        <div class="wrap">
+          <div class="sec-head rv"><span class="sec-num">05</span><h2>Let's build <b>something</b>.</h2></div>
+          <p class="contact-lede rv">
+            I am looking for software engineering and machine learning roles, and I am available to start
+            now. If any of the above is close to what your team works on, I would be glad to talk it
+            through in more detail.
+          </p>
+          <div class="contact-actions rv">
+            <a class="mailto" href="mailto:manjotssandhu2@gmail.com">manjotssandhu2@gmail.com</a>
+          </div>
+          <div class="contact-actions rv">
+            <a class="btn" href="https://github.com/Manj0t" target="_blank" rel="noopener">
+              GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path d="M7 17 17 7M17 7H8M17 7v9" />
+              </svg>
+            </a>
+            <a class="btn" href="http://www.linkedin.com/in/manjot-sandhu-b4a842290" target="_blank" rel="noopener">
+              LinkedIn
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path d="M7 17 17 7M17 7H8M17 7v9" />
+              </svg>
+            </a>
+            <a class="btn" href="tel:+17029376919">(702) 937-6919</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap foot-in">
+        <span>&copy; 2026 Manjot Sandhu</span>
+        <ul class="foot-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <span>Built in Las Vegas, Nevada</span>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

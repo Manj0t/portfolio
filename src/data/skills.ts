@@ -1,0 +1,23 @@
+/** Scrolling marquee between the work and experiments sections. */
+export const skills: string[] = [
+  'Python',
+  'C++',
+  'PyTorch',
+  'FastAPI',
+  'PostgreSQL',
+  'TypeScript',
+  'Java',
+  'C',
+  'SQL',
+  'Docker',
+  'Redis',
+  'AWS',
+  'Protobuf',
+  'pytest',
+  'Git & CI/CD',
+  'Scikit-learn',
+  'NumPy',
+  'Pandas',
+  'Selenium',
+  'Ubuntu',
+];

@@ -1,0 +1,70 @@
+.contact {
+  padding-bottom: clamp(3rem, 7vh, 5rem);
+}
+.contact h2 {
+  font-size: clamp(2.2rem, 8vw, 5.6rem);
+  max-width: 18ch;
+}
+
+.contact-lede {
+  font-size: clamp(1.05rem, 1rem + 0.5vw, 1.3rem);
+  color: var(--ink-soft);
+  max-width: 44ch;
+  margin: 1.6rem 0 2.4rem;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  align-items: center;
+}
+.contact-actions + .contact-actions {
+  margin-top: 2rem;
+}
+
+.mailto {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1rem, 0.95rem + 0.7vw, 1.5rem);
+  letter-spacing: -0.025em;
+  text-decoration: none;
+  border-bottom: 2.5px solid var(--clay);
+  padding-bottom: 3px;
+  transition:
+    color 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+.mailto:hover {
+  color: var(--clay);
+}
+
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 2rem 0 2.6rem;
+}
+.foot-in {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.foot-links {
+  display: flex;
+  gap: 1.3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.foot-links a {
+  text-decoration: none;
+  transition: color 0.25s;
+}
+.foot-links a:hover {
+  color: var(--clay);
+}

@@ -1,0 +1,33 @@
+/* Design tokens. Change the palette here and the whole site follows. */
+
+:root {
+  /* Paper and ink */
+  --paper: #f1ebdf;
+  --paper-2: #e8e0cf;
+  --paper-3: #ded4bf;
+  --ink: #16150f;
+  --ink-soft: #3d3a2e;
+  --muted: #736c58;
+  --rule: #cdc3ab;
+
+  /* Accents */
+  --clay: #c0481f;
+  --clay-deep: #95371a;
+  --pine: #1d5247;
+  --sky: #8fb7c4;
+  --sand: #e6b894;
+  --sage: #b9cbb0;
+
+  /* Type */
+  --display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --body: 'Instrument Sans', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Layout */
+  --gut: clamp(1.25rem, 5vw, 6rem);
+  --max: 1180px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --slow: 0.85s;
+}

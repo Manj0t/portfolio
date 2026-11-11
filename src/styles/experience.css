@@ -1,0 +1,74 @@
+.xp {
+  border-top: 1px solid var(--rule);
+}
+
+/* Separates unpaid involvement from the paid roles above it. */
+.xp-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--clay);
+  margin: clamp(2.5rem, 5vw, 3.5rem) 0 0;
+}
+
+.xp-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem clamp(1.5rem, 4vw, 3rem);
+  padding: clamp(1.4rem, 3vw, 2rem) 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: baseline;
+}
+
+.xp-row h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1.12rem, 1.05rem + 0.5vw, 1.5rem);
+  letter-spacing: -0.022em;
+  margin: 0 0 0.15rem;
+}
+
+.xp-org {
+  font-size: 0.95rem;
+  color: var(--clay);
+  font-weight: 500;
+}
+.xp-org a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1.5px solid currentColor;
+}
+
+.xp-row ul {
+  margin: 0.85rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--ink-soft);
+  font-size: 0.97rem;
+  line-height: 1.58;
+  max-width: 62ch;
+}
+.xp-row li {
+  margin-bottom: 0.4rem;
+}
+.xp-row li::marker {
+  color: var(--clay);
+}
+
+.xp-when {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .xp-row {
+    grid-template-columns: 1fr;
+  }
+  .xp-when {
+    text-align: left;
+  }
+}

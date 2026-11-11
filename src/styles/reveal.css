@@ -1,0 +1,19 @@
+/* Scroll-in animation. Elements opt in with .rv; lib/reveal.ts adds .in. */
+
+.rv {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity var(--slow) var(--ease),
+    transform var(--slow) var(--ease);
+}
+.rv.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* If JavaScript never runs, show everything rather than a blank page. */
+.no-js .rv {
+  opacity: 1;
+  transform: none;
+}

@@ -1,0 +1,66 @@
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: clamp(0.7rem, 1.4vw, 1rem);
+}
+
+.repo {
+  background: var(--paper);
+  padding: 1.5rem 1.4rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 7px;
+  transition:
+    background 0.35s var(--ease),
+    border-color 0.35s var(--ease),
+    transform 0.35s var(--ease);
+}
+.repo:hover {
+  background: var(--paper-2);
+  border-color: var(--clay);
+  transform: translateY(-3px);
+}
+
+.repo h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: -0.018em;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+.repo h3 svg {
+  width: 12px;
+  height: 12px;
+  flex: none;
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition:
+    opacity 0.35s var(--ease),
+    transform 0.35s var(--ease);
+}
+.repo:hover h3 svg {
+  opacity: 1;
+  transform: none;
+}
+
+.repo p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+  flex: 1;
+}
+.repo span {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--clay);
+}
