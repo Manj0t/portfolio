@@ -1,0 +1,9 @@
+/* Entry stylesheet for the /resume page. Same load-bearing order as
+   main.css, but it pulls in only the chrome the page actually uses. */
+
+@import './tokens.css';
+@import './base.css';
+@import './nav.css';
+@import './sections.css';
+@import './contact.css';
+@import './resume.css';

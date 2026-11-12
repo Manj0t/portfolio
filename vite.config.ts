@@ -10,6 +10,14 @@ export default defineConfig({
     assetsDir: 'assets',
     sourcemap: false,
     target: 'es2020',
+    // Two pages, each with its own entry script. Adding another page means
+    // adding an index.html folder here and one line below.
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        resume: 'resume/index.html',
+      },
+    },
   },
   server: {
     port: 5173,

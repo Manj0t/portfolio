@@ -1,0 +1,151 @@
+/* The /resume page. Document on the left, actions on the right, and the
+   same paper-and-clay treatment the rest of the site uses. */
+
+.resume-page {
+  padding-top: clamp(7rem, 15vh, 9.5rem);
+  padding-bottom: clamp(3.5rem, 9vh, 6rem);
+}
+
+.resume-head {
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 1.6rem;
+  transition: color 0.25s var(--ease);
+}
+.back i {
+  width: 22px;
+  height: 1.5px;
+  background: currentColor;
+  display: block;
+  transition: width 0.3s var(--ease);
+}
+.back:hover {
+  color: var(--clay);
+}
+.back:hover i {
+  width: 30px;
+}
+
+.resume-head .sec-head {
+  margin-bottom: 1.2rem;
+}
+
+.resume-lede {
+  font-size: clamp(1rem, 0.95rem + 0.35vw, 1.15rem);
+  color: var(--ink-soft);
+  max-width: 50ch;
+  margin: 0;
+}
+
+.resume-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(240px, 24vw, 310px);
+  gap: clamp(1.5rem, 3.5vw, 2.75rem);
+  align-items: start;
+}
+
+/* Document panel. The PDF renders white in both themes, so it sits on its
+   own framed surface rather than bleeding into the page. */
+.doc {
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 0.6rem;
+  overflow: hidden;
+}
+.doc-frame {
+  display: block;
+  width: 100%;
+  height: clamp(560px, 86vh, 1180px);
+  border: 0;
+  border-radius: 6px;
+  background: var(--paper-3);
+}
+
+.doc-fallback {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 1.1rem;
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+.doc-fallback p {
+  margin: 0;
+  color: var(--ink-soft);
+  max-width: 32ch;
+}
+
+/* Sidebar */
+.resume-side {
+  position: sticky;
+  top: clamp(5.5rem, 12vh, 7rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.side-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.btn.wide {
+  justify-content: space-between;
+  width: 100%;
+  padding-block: 0.78rem;
+}
+
+.side-facts {
+  border-top: 1px solid var(--rule);
+  margin: 0;
+}
+
+.side-note {
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+.side-note a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  border-bottom: 1.5px solid var(--clay);
+  padding-bottom: 1px;
+  transition: color 0.25s var(--ease);
+}
+.side-note a:hover {
+  color: var(--clay);
+}
+
+/* Current page marker on the nav's resume icon. */
+.icon-link.is-current {
+  border-color: var(--clay);
+  color: var(--clay);
+}
+
+@media (max-width: 900px) {
+  .resume-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .resume-side {
+    position: static;
+    order: -1;
+  }
+  .doc-frame {
+    height: clamp(460px, 70vh, 820px);
+  }
+}
