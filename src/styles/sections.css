@@ -33,6 +33,15 @@ h2 b {
 }
 
 /* About */
+/* About runs wider than the rest of the page. It is the only section that
+   is a true two-column row, so the extra width pushes the prose and the
+   fact list toward opposite edges instead of stacking them in the middle.
+   The paragraphs keep their own 56ch cap below, so nothing gets harder to
+   read as the column grows. */
+#about .wrap {
+  max-width: 1420px;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);

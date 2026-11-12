@@ -11,7 +11,7 @@ export const involvement: Role[] = [
     orgHref: 'https://acm.cs.unlv.edu/',
     period: 'Jun 2024 — Aug 2026',
     points: [
-      'Placed first in the UNLV Codeathon and competed in the Southern California ICPC Regional.',
+      'Competed alongside members and officers in local coding competitions and the Southern California ICPC Regional.',
       'Delivered technical presentations on algorithms and problem solving to 50+ members.',
     ],
   },

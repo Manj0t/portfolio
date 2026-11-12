@@ -10,7 +10,7 @@ export const experience: Role[] = [
     org: 'University of Nevada, Las Vegas',
     period: 'Aug 2025 — May 2026',
     points: [
-      'Supported 100+ students across two semesters as sole TA for a section that grew from 30 to 40 up to 60 to 70 students, by grading xv6 kernel projects and debugging student implementations of MLFQ scheduling and shared-memory syscalls.',
+      'Supported 100+ students across two semesters as a TA for a section that grew from 30 to 40 up to 60 to 70 students, by grading xv6 kernel projects and debugging student implementations of MLFQ scheduling and shared-memory syscalls.',
       "Unblocked an entire course cohort on a segmented paging assignment, by reverse-engineering xv6's undocumented memory allocator and writing line-level annotations of the source that students used as the project reference.",
     ],
   },
