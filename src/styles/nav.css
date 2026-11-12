@@ -94,6 +94,34 @@ nav.stuck {
   transform: scaleX(1);
 }
 
+/* Icon links (GitHub, LinkedIn, resume) in the nav. Same circle treatment
+   as the theme toggle so they read as one family of controls. */
+.icon-link {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition:
+    border-color 0.3s var(--ease),
+    color 0.3s var(--ease),
+    transform 0.3s var(--ease);
+}
+.icon-link:hover {
+  border-color: var(--clay);
+  color: var(--clay);
+  transform: translateY(-2px);
+}
+.icon-link svg {
+  width: 17px;
+  height: 17px;
+}
+
 /* Theme toggle. Both icons are stacked and cross-faded, so the button
    never changes size between themes. */
 .theme-toggle {
@@ -169,6 +197,11 @@ nav.stuck {
 
 @media (max-width: 760px) {
   .nav-links {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .icon-link {
     display: none;
   }
 }
