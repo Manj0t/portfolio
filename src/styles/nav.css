@@ -40,6 +40,13 @@ nav.stuck {
   gap: 1rem;
 }
 
+/* The nav uses its own full-width wrap instead of the page's centered
+   .wrap, so the logo and the button cluster sit at the actual screen
+   edges on any window size instead of inside the 1180px content column. */
+nav .wrap {
+  max-width: none;
+}
+
 .mark {
   font-family: var(--display);
   font-weight: 800;
