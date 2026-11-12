@@ -13,7 +13,7 @@ const STORAGE_KEY = 'theme';
 
 /** Must match the --paper value for each theme in tokens.css. */
 const BROWSER_UI_COLOR: Record<Theme, string> = {
-  light: '#f1ebdf',
+  light: '#ebe1cc',
   dark: '#14120e',
 };
 

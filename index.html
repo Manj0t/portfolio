@@ -9,7 +9,7 @@
       content="Manjot Sandhu is a software engineer in Las Vegas who builds backend systems and applied machine learning."
     />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#f1ebdf" />
+    <meta name="theme-color" content="#ebe1cc" />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Manjot Sandhu" />
@@ -34,6 +34,17 @@
           }
         } catch (e) {}
         document.documentElement.classList.remove('no-js');
+        // Hide the greeting until lib/alive.ts has split it into words, so
+        // it never shows once and then jumps. Released after 2.5s if the
+        // script fails, so a broken script can never leave it hidden.
+        if (matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+          document.documentElement.classList.add('intro');
+          setTimeout(function () {
+            if (!document.querySelector('.hero h1[data-split]')) {
+              document.documentElement.classList.remove('intro');
+            }
+          }, 2500);
+        }
       })();
     </script>
 

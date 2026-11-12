@@ -5,13 +5,13 @@
 
 :root {
   /* Paper and ink */
-  --paper: #f1ebdf;
-  --paper-2: #e8e0cf;
-  --paper-3: #ded4bf;
+  --paper: #ebe1cc;
+  --paper-2: #e2d6bd;
+  --paper-3: #d6c8ab;
   --ink: #16150f;
-  --ink-soft: #3d3a2e;
-  --muted: #736c58;
-  --rule: #cdc3ab;
+  --ink-soft: #3a3628;
+  --muted: #6c634d;
+  --rule: #c6b897;
 
   /* Accents */
   --clay: #c0481f;
@@ -26,8 +26,8 @@
   --blob-op-c: 0.42;
 
   /* Translucent surfaces, which cannot be derived from the solids above */
-  --nav-bg: rgb(241 235 223 / 88%);
-  --eyebrow-bg: rgb(241 235 223 / 60%);
+  --nav-bg: rgb(235 225 204 / 88%);
+  --eyebrow-bg: rgb(235 225 204 / 60%);
 
   /* Status pills */
   --pill-live-bg: rgb(29 82 71 / 10%);
@@ -37,6 +37,10 @@
 
   /* Paper grain strength */
   --grain: 0.035;
+
+  /* Pointer light in the hero and glow inside cards */
+  --light-tint: rgb(255 251 242 / 72%);
+  --card-glow: rgb(192 72 31 / 9%);
 
   /* Type */
   --display: 'Bricolage Grotesque', system-ui, sans-serif;
@@ -86,6 +90,10 @@
 
   /* Grain reads stronger on dark, so it is dialled back. */
   --grain: 0.022;
+
+  /* The pointer light becomes a low ember rather than a highlight. */
+  --light-tint: rgb(228 112 63 / 14%);
+  --card-glow: rgb(228 112 63 / 11%);
 
   color-scheme: dark;
 }

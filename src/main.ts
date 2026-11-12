@@ -17,6 +17,7 @@ import { initNav } from './lib/nav';
 import { initReveal } from './lib/reveal';
 import { initAccordion } from './lib/accordion';
 import { initParallax } from './lib/parallax';
+import { initAlive } from './lib/alive';
 
 function render(): void {
   const projectList = mount('#projectList');
@@ -42,6 +43,7 @@ function enhance(): void {
   initAccordion();
   initReveal();
   initParallax();
+  initAlive();
 }
 
 render();
